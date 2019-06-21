@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+        function startQuizz(question,answer){
+            var userInput = prompt(question);
+            userInput = userInput.toLocaleLowerCase();
+            if(userInput == answer){
+                alert("Вы ответили правильно!");
+                rightGuess++;
+            }
+            else
+                alert("Вы ошиблись!");
+        }
+
+        var questions = [
+            ["Что зимой  и летом одним цветом? ", ["ёлочка"]],
+            ["Без окон и дверей,полна горница людей?", ["огурец"]],
+            ["Каждый охотник мечтает знать где сидит кто? ", ["фазан"]],
+            ["Чем можно поделиться только один раз? ", ["секретом"]],
+        
+        ];
+
+        var rightGuess = 0;
+
+        for(var i = 0; i < questions.length;i++){
+            var quest = questions[i][0];
+            var answers = questions[i][1];
+            startQuizz(quest, answers);
+        }
+
+        alert("У вас " + rightGuess + " правильных ответов  ");
+
+
+</script>
